@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyLine Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Launching SkyLine...</p>
+        <img src="https://png.pngtree.com/thumb_back/fh260/background/20230407/pngtree-flight-booking-sign-at-an-airport-with-a-plane-in-the-photo-image_2280074.jpg" class="image" />
+    </div>
+    <div id="app" class="hidden">
+        <!-- Header -->
+        <header>
+            <div class="header-container">
+                <span class="header-logo"> ✈</span>
+                <div class="header-text">
+                    <h1>FLIGHT BOOKING WEB APPLICATION</h1>
+                    <p>Professional Flight Booking</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Search Flights -->
+            <section id="search-section">
+                <h2>Search Your Flight</h2>
+                <form id="searchForm">
+                    <input type="text" id="origin" placeholder="From (e.g., Mumbai)" required />
+                    <input type="text" id="destination" placeholder="To (e.g., Dubai)" required />
+                    <input type="date" id="departureDate" required />
+                    <button type="submit">Search Flights</button>
+                </form>
+                <p class="quote">“The journey of a thousand miles begins with a single flight.”</p>
+            </section>
+            <!-- Results -->
+            <section id="results-section" class="hidden">
+                <h2>Available Flights</h2>
+                <div id="results" class="flights-list"></div>
+            </section>
+            <!-- Payment -->
+            <section id="payment-section" class="hidden">
+                <h2>Passenger & Payment</h2>
+                <form id="paymentForm">
+                    <input type="text" id="passengerName" placeholder="Full Name" required />
+                    <input type="email" id="passengerEmail" placeholder="Email Address" required />
+                    <input type="text" id="cardNumber" placeholder="Card Number (13–19 digits)" required />
+                    <input type="text" id="expiryDate" placeholder="MM/YY" required />
+                    <input type="text" id="cvv" placeholder="CVV (3–4 digits)" required />
+                    <button type="submit">Confirm Booking</button>
+                </form>
+            </section>
+            <!-- Success -->
+            <section id="success-section" class="hidden">
+                <div class="success-animation">
+                    <div class="checkmark">✔</div>
+                    <h2>Booking Confirmed</h2>
+                    <p>Your ticket has been sent to your email. Safe journey!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
